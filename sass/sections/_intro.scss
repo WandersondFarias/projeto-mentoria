@@ -1,0 +1,108 @@
+.intro {
+    position: relative;
+    width: 100%;
+    height: 740px;
+    @include flex_centered(column);
+    flex-wrap: nowrap;
+    gap: 20px;
+    padding: 0 6%;
+
+    img {
+        position: absolute;
+    }
+    .waves-desktop {
+        display: none;
+    }
+    .waves-mobile {
+        width: 100%;
+        top: 0;
+        height: 450px;
+        object-fit:fill;
+    }
+    .mockups{
+        width: 100%;
+        top: -60px;
+        width: 375px;
+        
+    }
+    h1, p, button {
+        transform: translateY(170px);
+    }
+    @include responsive($tablet) {
+        padding: 0 10%;
+        height: 1024px;
+
+        .waves-mobile {
+            height: 650px;
+        }
+        .mockups {
+            top: -140px;
+            width: 600px;
+        }
+        h1, p, button {
+            transform: translateY(220px);
+        }
+    }    
+}
+@include responsive($tablet_large){
+    .intro {
+        height: 700px;
+        align-items: flex-start;
+        .waves-mobile{
+            display: none;
+        }
+        .waves-desktop {
+            display: block;
+            width: 900px;
+            bottom: -55px;
+            right: -285px;
+        }
+        .mockups {
+            width: 650px;
+            top: -30px;
+            right: -110px;
+        }
+        h1, p, button{
+            transform: translateY(30px);
+        }
+        h1 {
+            width: 400px;
+            text-align: left;
+            font-size: 45px;
+        }
+        p {
+            text-align: left;
+            width: 40%;
+
+            br {
+                display: none;
+            }
+        }
+
+    }
+}
+@include responsive($desktop){
+    .intro {
+        .waves-desktop {
+            width: 1200px;
+            bottom: -74px;
+            right: -390px;
+        }
+        .mockups {
+            width: 760px;
+            top: -60px;
+            right: -130px;
+        }
+        h1 {
+            width: 450px;
+            font-size: 60px;
+        }
+        p {
+            text-align: left;
+            width: 410px;
+        }
+
+    }
+}
+
+
