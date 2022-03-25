@@ -1,0 +1,17 @@
+button {
+    padding: 13px 30px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 50px;
+    font-family: "Public Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    background-image: linear-gradient(to right, $lime_green, $bright_cyan);
+    color: $white;
+    cursor: pointer;
+    z-index: 900;
+}
+
+button:hover {
+    background-image: linear-gradient(to right, hsl(136, 49%, 70%), hsl(192, 67%, 74%));
+}
