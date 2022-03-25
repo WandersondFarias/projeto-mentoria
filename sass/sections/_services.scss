@@ -1,0 +1,50 @@
+.services {
+    padding: 100px 6%;
+    background-color: $light_grayish_blue;
+    @include responsive($desktop){
+        padding: 100px 10%;
+    }
+
+    h1 {
+        margin-bottom: 30px;
+        @include responsive($desktop) {
+            text-align: left;
+            font-size: 40px;
+        }
+    }
+    p {
+        max-width: 400px; 
+        margin: auto;
+        @include responsive($desktop) {
+            text-align: left;
+            margin: 0;
+            max-width: 600px
+        }
+    }
+    &__container {
+        @include flex_centered(row);
+        gap: 30px;
+        margin-top: 50px;
+        @include responsive($desktop){
+            justify-content: space-between;
+            margin-top: 70px;
+            gap: 15px
+        }
+      
+        .services__item {
+            @include flex_centered(column);
+            gap: 30px;
+            @include responsive($desktop) {
+                flex-basis: 21%;
+                align-items: flex-start;
+
+                h3 {
+                    font-size: 25px;
+                }
+                p {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
